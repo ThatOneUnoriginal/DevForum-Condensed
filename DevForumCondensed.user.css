@@ -1,0 +1,87 @@
+
+
+:root {
+    --d-max-width: 4110px;
+    --topic-body-width: 100%;
+    --topic-body-width-padding: 4px;
+}
+
+/*--Remove this to remove color + font modifications--*/
+:root{
+    --header_background: #fafbff;
+    --secondary:#f3f4f9;
+    --tertiary: #2066b6;
+    --quaternary: #1d5da6 !important;
+    --tertiary-med-or-tertiary: #2066b6;
+    --love: #ca2018;
+    --font-family: Public Sans, sans-serif;
+    --heading-font-family: Public Sans, sans-serif !important;
+}
+/*--Background and Font--*/
+body {
+    font-size: 14px !important; font-weight: 600 !important;
+    background-color: #f3f4f9 !important; /*--Remove this to remove color modifications--*/
+}
+
+header{height: 57px !important;}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item{padding: 0px;}
+.jss3{padding: 0px 24px;}
+.MuiGrid-container{width: 70%;}
+[class*="archetype-"]{--below-topic-margin: 0em;}
+#topic-footer-buttons .pinned-button, #topic-footer-buttons .topic-notifications-button{margin: -0.2em 0em;}
+#topic-footer-buttons .topic-footer-main-buttons button, #topic-footer-buttons .topic-footer-main-buttons details{margin-right: 0.3em;}
+button, select{text-transform: lowercase;}
+.topic-list .topic-list-data:first-of-type{padding-left: 4px}
+.topic-list-item td:first-child, .topic-post{padding: 1px 0px;}
+.category-list .featured-topic:first-of-type{margin-top: 0px;}
+.category-list .featured-topic{margin: 0px 0 0;}
+.category-list tbody .latest{padding: 0 0 0px 5px;}
+.latest .featured-topic{padding-left: 0px;}
+.category-list .subcategories .subcategory{margin-right: -0.3em;}
+.category-list .subcategories{margin-top: 0em;}
+.list-cell, .table-heading, .category-list td, .category-list th{padding: 0px 0px;}
+.categories-list .category h3, .categories-list .category h4{margin-bottom: -0.7rem;}
+.navigation-container{--nav-space: 0em;}
+.category-breadcrumb>li{margin-right: 0.2em;}
+.nav-pills>li{margin-right: 0.2em;}
+.user-menu .quick-access-panel li a, .user-menu .quick-access-panel li .profile-tab-btn{margin: 0.27em 0em 0em 0em;}
+div.menu-links-header .menu-links-row .glyphs{width: 25%;}
+.topic-list .topic-list-data {padding: 0px 0px;}
+.menu-panel .widget-link, .menu-panel .categories-link{padding: 0em 0em;}
+.menu-panel li.category-link{padding: 0em 0em;}
+.nav-pills>li>a, .nav-pills>li button{padding: 1px 5px;}
+.top-sub-section li{padding:0px 3px; margin: 0px 0;}
+.stats-section li{padding:0px 0px 0px 0; margin: 0 0px 0px 0;}
+.stats-section li.linked-stat a{padding: 0px 0px 0px;}
+.top-section, .top-sub-section{margin-bottom: 0px;}
+.stats-title{margin-bottom: 0px;}
+.top-categories-section table td, .top-categories-section table th{padding: 0.01em;}
+.badge-card .badge-contents .badge-icon{margin-right: 0em;}
+.badge-card .badge-contents {min-height: 0em; padding: 0 0em;}
+.badge-group-list{grid-gap: 0.2em; margin-bottom: 0em;}
+.nav-stacked a{padding:0.1em;}
+.user-content-wrapper{grid-template-columns: 0fr 1fr;}
+.topic-list .num .badge-posts{padding: 0px 0px;}
+.form-vertical .control-group{margin-bottom: 0em;}
+.user-additional-controls{padding-top: 0px;}
+.user-stream .item, .user-stream .user-stream-item{padding: 0em 0em;}
+.user-stream .excerpt{margin: 0em 0 0 0;}
+.user-stream .avatar-link{margin-right: 0.1em;}
+.topic-list-main-link a.title, .topic-list .main-link a.title, .latest-topic-list-item .main-link a.title{padding: 0px 0;}
+label{margin-bottom: 0px;}
+.user-preferences .instructions{margin-bottom: 0px; margin-top: 0px;}
+form{padding: 0 0 0px;}
+.pref-auth-tokens .row{margin: 0px 0px;}
+.pref-auth-tokens .auth-token-icon{margin-right: 5px;}
+.controls-dropdown{margin-bottom: 0px;}
+.form-vertical .controls:not(.controls-dropdown)+.controls{margin-top:0em;}
+.user-preferences .tracking-controls{margin-top: 0px;}
+.topic-map .map li{padding: 0px 2px;}
+.topic-map{margin: 0px 0px var(--topic-body-width-padding)}
+.post-links-container .post-links li:last-of-type{margin-bottom: 0em;}
+.post-links-container ul li{margin-bottom: 0em;}
+.post-links-container{margin-left: 0em;}
+.post-menu-area{margin: -10px 0;}
+#topic-title{margin-bottom: 0em;}
+.timeline-container .topic-timeline .timeline-footer-controls{margin-top: 0em;}
+.timeline-container .topic-timeline .timeline-scrollarea{margin-top:0.2em;}
