@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         DevForum Condensed
+@version      v1.2
+@namespace    userstyles.world/user/ThatOneUnoriginal
+@description  Increases the width of topic posts, removes the margins and padding from multiple elements, and slightly changes the appearance.
+@author       ThatOneUnoriginal
+@license      MIT License
+==/UserStyle== */
+@-moz-document url-prefix("https://devforum.roblox.com") {
 
 
 :root {
@@ -8,19 +17,12 @@
 
 /*--Remove this to remove color + font modifications--*/
 :root{
-    --header_background: #fafbff;
-    --secondary:#f3f4f9;
-    --tertiary: #2066b6;
-    --quaternary: #1d5da6 !important;
-    --tertiary-med-or-tertiary: #2066b6;
-    --love: #ca2018;
     --font-family: Public Sans, sans-serif;
     --heading-font-family: Public Sans, sans-serif !important;
 }
 /*--Background and Font--*/
 body {
     font-size: 14px !important; font-weight: 600 !important;
-    background-color: #f3f4f9 !important; /*--Remove this to remove color modifications--*/
 }
 
 header{height: 57px !important;}
@@ -31,7 +33,7 @@ header{height: 57px !important;}
 #topic-footer-buttons .pinned-button, #topic-footer-buttons .topic-notifications-button{margin: -0.2em 0em;}
 #topic-footer-buttons .topic-footer-main-buttons button, #topic-footer-buttons .topic-footer-main-buttons details{margin-right: 0.3em;}
 button, select{text-transform: lowercase;}
-.topic-list .topic-list-data:first-of-type{padding-left: 4px}
+.topic-list .topic-list-data:first-of-type{padding-left: 0px}
 .topic-list-item td:first-child, .topic-post{padding: 1px 0px;}
 .category-list .featured-topic:first-of-type{margin-top: 0px;}
 .category-list .featured-topic{margin: 0px 0 0;}
@@ -44,7 +46,7 @@ button, select{text-transform: lowercase;}
 .navigation-container{--nav-space: 0em;}
 .category-breadcrumb>li{margin-right: 0.2em;}
 .nav-pills>li{margin-right: 0.2em;}
-.user-menu .quick-access-panel li a, .user-menu .quick-access-panel li .profile-tab-btn{margin: 0.27em 0em 0em 0em;}
+.user-menu .quick-access-panel li a, .user-menu .quick-access-panel li .profile-tab-btn{margin: 0.2em 0em 0em 0em;}
 div.menu-links-header .menu-links-row .glyphs{width: 25%;}
 .topic-list .topic-list-data {padding: 0px 0px;}
 .menu-panel .widget-link, .menu-panel .categories-link{padding: 0em 0em;}
@@ -85,3 +87,26 @@ form{padding: 0 0 0px;}
 #topic-title{margin-bottom: 0em;}
 .timeline-container .topic-timeline .timeline-footer-controls{margin-top: 0em;}
 .timeline-container .topic-timeline .timeline-scrollarea{margin-top:0.2em;}
+.timeline-container .topic-timeline .timeline-scroller .back-button{margin-top: 0em;}
+.timeline-container .topic-timeline .timeline-footer-controls .reply-to-post{margin-right: 0.3em;}
+nav.post-controls .actions button.create{margin-left: -0.4em}   
+nav.post-controls .actions button{margin-left: -0.7em}
+blockquote{margin-left:0; margin-right: 0; padding: 6px;}
+.post-actions{margin-bottom: 5px;}
+.topic-body{padding: 0 0 0 0;}
+    div.poll .results>li{padding: 0 0;}
+    div.poll .poll-title{padding:  0; margin-bottom: 0em;}
+    div.poll .poll-container{padding: 0.2em 0.2em;}
+    div.poll .poll-buttons{padding: 0.3em;}
+    div.poll .poll-info{vertical-align: top; padding: 0em 0;}
+    div.poll .poll-voters:not(:empty){min-height:0;margin-bottom:0;}
+    .topic-body .cooked{padding: 0;}
+    div.topic-avatar{padding: 0 0px 0px 0}
+    div.topic-avatar > div > div{display: none !important;}
+    p{margin-block-end: 0.5em; margin-block-start: 0.5em}
+    .user-menu .quick-access-panel{padding-top: 0em;}
+    .menu-panel{padding: 0em;}
+    .wrap{padding: 0 5px}
+    h1, h2, h3, h4, h5, h6{margin-bottom: 0rem;}
+    div.menu-links-header .menu-links-row .glyphs button{padding: 0.4em}
+}
