@@ -1,3 +1,7 @@
+## Update 1.20
+* Condensed More Sections of the Website
+* Removed Colour Modificaitions; Will make the theme/sytle work seamlessly regardless of theme chosen
+
 ## Update 1.10
 Condensed Summary, Activity, Messages, and Preferences
 
