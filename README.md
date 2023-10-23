@@ -4,6 +4,15 @@
 # About
 DevForum Condensed is a User Style/Theme that modifies certain aspects of the Roblox DevForums website. Instead of being constricted to a section in the middle, topics and posts strech across the entire screen. Padding and margins are additionally removed from multiple elements, brining everything closer and allowing more content to be shown on the screen at once.
 
+# Varibales
+This theme features multiple variants which the user can modify. Below is a list of all the variables, the available options, and what they change.
+| Variable Name | Variable Types| Modifies |
+| ------------- | ------------- | -------- |
+| UseCustLogo   | 1<br>0        | 1: Uses the Custom "DevForum Condensed" logo<br>0: Uses the Default Logo|
+| ThemeType     | Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<by>RobloxDark| Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0|
+| UnUglify | 1<br>0 | 1: Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue<br>0: Uses the default Colours for Dark Theme| 
+| OpenDyslexic | 1<br>0 | 1: Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)<br>0: Keeps the font to the default [Public Sans](https://fonts.google.com/specimen/Public+Sans)|
+
 # Note
 The theme changes ``--heading-font-family`` and ``-font-family`` from Arial (for headings) and Arial (for everything else) to [Public Sans](https://fonts.google.com/specimen/Public+Sans). These modifications are also in :root and can be removed the same way.
 
