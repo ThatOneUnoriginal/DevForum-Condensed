@@ -13,12 +13,14 @@ This theme features multiple variants which the user can modify. Below is a list
 | UnUglify | 1<br>0 | 1: Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue<br>0: Uses the default Colours for Dark Theme| 
 | OpenDyslexic | 1<br>0 | 1: Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)<br>0: Keeps the font to the default [Public Sans](https://fonts.google.com/specimen/Public+Sans)|
 
+Note: While switching font to OpenDyslexic is an option, I wouldn't recommend using this theme if you have dyslexia or other impairments that may make it more difficult to read/see. This stylus removes the spacing between multiple parts of the website, which may make it harder for such people to as easily use the website.
+
 # Known Issues 🚧
 * The ``Swap Font to OpenDyslexic`` and ``Make Dark Theme Less Ugly`` options don't work on ``Roblox Dark`` Theme Mode
 # Installation
 Install the Stylus extension for [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/) or [Chrome/Chromium Based Browsers](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
 
-You can find the SocialFurr Refreshed Theme on UserStyles.World by going [here](https://userstyles.world/style/12599/devforum-condensed). On this page, scroll down until you see a "Install" button. Once clicked it will direct you to the Stylus sytle installation screen, on this simply click the "Install style" button.
+You can find the DevForum Condensed Theme on UserStyles.World by going [here](https://userstyles.world/style/12599/devforum-condensed). On this page, scroll down until you see a "Install" button. Once clicked it will direct you to the Stylus sytle installation screen, on this simply click the "Install style" button.
 
 # Creator Information
 If for whatever reason you intend on contacting me, you can check out my cardd [here](https://thatoneunoriginal.carrd.co)
