@@ -13,9 +13,8 @@ This theme features multiple variants which the user can modify. Below is a list
 | UnUglify | 1<br>0 | 1: Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue<br>0: Uses the default Colours for Dark Theme| 
 | OpenDyslexic | 1<br>0 | 1: Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)<br>0: Keeps the font to the default [Public Sans](https://fonts.google.com/specimen/Public+Sans)|
 
-# Note
-The theme changes ``--heading-font-family`` and ``-font-family`` from Arial (for headings) and Arial (for everything else) to [Public Sans](https://fonts.google.com/specimen/Public+Sans). These modifications are also in :root and can be removed the same way.
-
+# Known Issues 🚧
+* The ``Swap Font to OpenDyslexic`` and ``Make Dark Theme Less Ugly`` options don't work on ``Roblox Dark`` Theme Mode
 # Installation
 Install the Stylus extension for [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/) or [Chrome/Chromium Based Browsers](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
 
