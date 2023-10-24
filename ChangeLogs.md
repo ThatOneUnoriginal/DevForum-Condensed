@@ -1,3 +1,14 @@
+## Update 1.4
+* Ability to Remove Footer
+   - Can choose between removing Suggested Topics, External Links, or Both
+* Ability to Remove Category Descriptions
+* Ability to Remove Latest Posts Section on Categories
+* Ability to Remove Topic Slider on Topics
+* Ability to Remove Original/Frequent Poster Icons on Topic List
+* Ability to Remove Tags Under Topics in Topic List
+* Ability to Remove Replies, Views, and Activity Sections on Topic List
+* Ability to Remove Subcateogies when Viewing Category Pages
+
 ## Update 1.3
 * Custom "DevForum Condensed" Logo and Icon Swaps Default 
     - This can be Enabled/Disabled by Changing the "Use Custom Logo" Variable
