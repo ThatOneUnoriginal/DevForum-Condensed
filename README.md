@@ -17,6 +17,7 @@ Note: While switching font to OpenDyslexic is an option, I wouldn't recommend us
 
 # Known Issues 🚧
 * The ``Swap Font to OpenDyslexic`` and ``Make Dark Theme Less Ugly`` options don't work on ``Roblox Dark`` Theme Mode
+Additionally, since I'm only ``Member`` on the Developer Forums, I cannot access the category ``Lounge`` so I cannot gaurentee that modifications will in-full appear there.
 # Installation
 Install the Stylus extension for [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/) or [Chrome/Chromium Based Browsers](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
 
