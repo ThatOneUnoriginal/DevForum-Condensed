@@ -9,7 +9,7 @@ This theme features multiple variants which the user can modify. Below is a list
 | Variable Name | Variable Types| Modifies |
 | ------------- | ------------- | -------- |
 | UseCustLogo   | 1<br>0        | 1: Uses the Custom "DevForum Condensed" logo<br>0: Uses the Default Logo|
-| ThemeType     | Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<by>RobloxDark<br>IntersexTransgender<br>NonBinary<br>Pride<br>Bisexual<br>Lesbian<br>Pansexual<br>ManGayPride| Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0|
+| ThemeType     | Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<by>RobloxDark<br>Intersex<br>Transgender<br>NonBinary<br>Pride<br>Bisexual<br>Lesbian<br>Pansexual<br>ManGayPride| Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0|
 | UnUglify | 1<br>0 | 1: Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue<br>0: Uses the default Colours for Dark Theme| 
 | OpenDyslexic | 1<br>0 | 1: Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)<br>0: Keeps the font to the (style) default [Public Sans](https://fonts.google.com/specimen/Public+Sans)|
 | FooterType | Default<br>RemoveRecommended<br>RemoveExternalLinks<br>RemoveBoth | Default: Does Nothing<br>RemoveRecommended: Removes the Recommended Topics Under Topic Pages<br>RemoveExternalLinks: Removes the Roblox External Links Under All Pages<br>RemoveBoth: Removes Both|
