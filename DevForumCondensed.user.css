@@ -1,51 +1,53 @@
 /* ==UserStyle==
 @name         DevForum Condensed
-@version      v1.4
+@version      v1.5
 @namespace    userstyles.world/user/ThatOneUnoriginal
 @description  Increases the width of topic posts, removes the margins and padding from multiple elements, and slightly changes the appearance.
 @author       ThatOneUnoriginal
 @license      MIT License
 @preprocessor   stylus
 
+@var checkbox WidePostOnly "Remove Condensing of Elements" 0
 @var checkbox UseCustLogo "Use Custom Logo" 1
 @var select ThemeType "Theme Logo" ["Light", "LightAlt", "Dark", "DarkAlt", "GreyAmber", "RobloxDark","Intersex", "Transgender", "NonBinary", "Pride", "Bisexual", "Lesbian", "Pansexual", "ManGayPride" ]
+
 
 @var checkbox UnUglify "😷 Make Dark Theme Less Ugly" 0
 @var checkbox OpenDyslexic "👁️ Swap Font to OpenDyslexic" 0
 @var select FooterType "❌ Footer" ["Default", "RemoveRecommended", "RemoveExternalLinks", "RemoveBoth"]
-@var checkbox RevDesc "❌ Category Descriptions" 0
-@var checkbox RevLatest "❌ Latest Section" 0
 @var checkbox RemoveSlider "❌ Topic Slider" 0
-@var checkbox RevPosterImgs "❌ Remove Original/Frequent Poster Section" 0
-@var checkbox TopicStats "❌ Topic Stats" 0
-@var checkbox RevTags "❌ Remove Tags Under Topics List" 0
-@var checkbox SubCatTags "❌ Remove Sub Category Tags Under Topics List" 0
 @var checkbox SubCat "❌ Remove Sub Categories From List" 0
+@var select CategoryInfo "❌ Category Information" ["Default", "RemoveDescriptions", "RemoveSubcatecorgyListings", "RemoveBoth"]
+@var select CategoryTopicInfo "❌ Category Topic Information" ["Default", "RemoveLatest", "RemoveTopics", "RemoveBoth"]
+@var select TopicInformation "❌ Topic Information" ["Default", "RemoveOriginalFrequentPosters", "RemoveRepliesViewsAndActivity", "RemoveBoth"]
+@var select TopicTagInformation "❌ Topic Tags" ["Default", "RemoveNonSubcategoryTags", "RemoveCategoryTags", "RemoveBoth"]
+@var number FontSize "🔠 Font Size" [17, 0, 30, 1, 'px']
+@var number FontWeight "🔠 Font Weight" [600, 300, 1000, 10]
+@var text FontType "Font Type" Public Sans
+
 ==/UserStyle== */
 
 
-@-moz-document url-prefix("https://devforum.roblox.com"){ 
+@-moz-document domain("devforum.roblox.com"){ 
 @import url('https://fonts.cdnfonts.com/css/open-dyslexic');
-
+@import url('https://<span></span>fonts.googleapis.com/css?family=Public+Sans')
+    
 :root {
     --topic-body-width: 500000px;
     --d-max-width: 5110px; 
-    --topic-body-width-padding: 4px;
 }
- 
-/*--Remove this to remove color + font modifications--*/
+body{
+    font-size: FontSize !important; font-weight: FontWeight !important;
+}
+    
 :root{
-    --primary-1000: #2f2f2f;
-    --primary-1100: #222;
-    --primary-1100: #0e0e0e;
-    --font-family: Public Sans, sans-serif;
-    --heading-font-family: Public Sans, sans-serif !important;
+    --font-family: FontType, sans-serif;
+    --heading-font-family: FontType, sans-serif !important;
 }
-/*--Background and Font--*/
-body {
-    font-size: 14px !important; font-weight: 600 !important;
+:root{
+--topic-body-width-padding: 4px;
 }
-
+if WidePostOnly=="0"{
 header{height: 57px !important;}
 .MuiGrid-spacing-xs-1 > .MuiGrid-item{padding: 0px;}
 .jss3{padding: 0px 24px;}
@@ -69,7 +71,7 @@ button, select{text-transform: lowercase;}
 .nav-pills>li{margin-right: 0.2em;}
 .user-menu .quick-access-panel li a, .user-menu .quick-access-panel li .profile-tab-btn{margin: 0.2em 0em 0em 0em;}
 div.menu-links-header .menu-links-row .glyphs{width: 25%;}
-.topic-list .topic-list-data {padding: 0px 0px;}
+.topic-list .topic-list-data {padding: 0px 0px;} 
 .menu-panel .widget-link, .menu-panel .categories-link{padding: 0em 0em;}
 .menu-panel li.category-link{padding: 0em 0em;}
 .nav-pills>li>a, .nav-pills>li button{padding: 1px 5px;}
@@ -104,7 +106,7 @@ form{padding: 0 0 0px;}
 .post-links-container .post-links li:last-of-type{margin-bottom: 0em;}
 .post-links-container ul li{margin-bottom: 0em;}
 .post-links-container{margin-left: 0em;}
-.post-menu-area{margin: -10px 0;}
+.post-menu-area{margin: -3px 0;}
 #topic-title{margin-bottom: 0em;}
 .timeline-container .topic-timeline .timeline-footer-controls{margin-top: 0em;}
 .timeline-container .topic-timeline .timeline-scrollarea{margin-top:0.2em;}
@@ -130,8 +132,7 @@ p{margin-block-end: 0.5em; margin-block-start: 0.5em}
 .wrap{padding: 0 5px}
 h1, h2, h3, h4, h5, h6{margin-bottom: 0rem;}
 div.menu-links-header .menu-links-row .glyphs button{padding: 0.4em}
-
-    
+} 
 if UseCustLogo{
     if ThemeType=="Light"{
         .logo-big, #site-logo:not(.logo-small) {
@@ -454,7 +455,7 @@ if UseCustLogo{
         }
     }
 }
-
+if WidePostOnly=="0"{
 if UnUglify{
    :root{
        --quaternary: var(--tertiary);
@@ -480,42 +481,38 @@ if FooterType=="RemoveBoth"{
     #suggested-topics{display:none;}
 
 }
-if RevDesc{
+
+td.main-link.clearfix.topic-list-data > a{display: none;}
+if RemoveSlider{
+    .timeline-container{display:none;}
+    #topic-progress{display:none;}
+
+    }
+
+if CategoryInfo=="RemoveDescriptions"{
     .categories-list .category h3, .categories-list .category h4{
         margin-bottom: 0.1em;
     }
-tr:nth-child(1) > td.category > div.category-description{
-    display:none;
+    
+    div.category-description{
+       display: none;
     }
-tr:nth-child(2) > td.category > div{
-       display: none;
-   }
-tr:nth-child(3) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(4) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(5) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(6) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(7) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(8) > td.category > div.category-description{
-       display: none;
-   }
-tr:nth-child(9) > td.category > div{
-       display: none;
-   }
-tr:nth-child(10) > td.category > div.category-description{
-       display: none;
-   }
 }
-if RevLatest{
+if CategoryInfo=="RemoveSubcatecorgyListings"{
+    div.subcategories{
+        display:none;
+            }
+        }
+    
+if CategoryInfo=="RemoveBoth"{
+    div.category-description{
+       display: none;
+    }
+    div.subcategories{
+        display:none;
+        }
+    }
+if CategoryTopicInfo=="RemoveLatest"{
     td.latest{
         display:none;
     }
@@ -523,15 +520,61 @@ if RevLatest{
         display: none;
     }
 }
-td.main-link.clearfix.topic-list-data > a{display: none;}
-if RemoveSlider{
-    .timeline-container{display:none;}
+if CategoryTopicInfo=="RemoveTopics"{
+    td.topics{
+        display: none;
     }
-if RevPosterImgs{
-    .topic-list .topic-list-data.posters{display: none;}
+    th.topics{
+        display: none;
+    }
+}    
+if CategoryTopicInfo=="RemoveBoth"{
+    td.topics{
+        display: none;
+    }
+    td.latest{
+        display:none;
+    }
+    th.latest{
+        display: none;
+    }
+    th.topics{
+        display: none;
+    }
 }
-
-if TopicStats{
+if TopicInformation=="RemoveOriginalFrequentPosters"{
+    .topic-list .topic-list-data.posters{display: none;}
+    }
+if TopicInformation=="RemoveRepliesViewsAndActivity"{
+    td.num.topic-list-data.age.activity{
+      display:none;  
+    }
+td.num.views.heatmap-high.topic-list-data{
+    display: none;
+}
+td.num.posts-map.posts.heatmap-high.topic-list-data{
+    display: none;
+}
+td.num.views.heatmap-med.topic-list-data{
+    display: none;
+}
+td.num.posts-map.posts.topic-list-data{
+    display: none;
+}
+th.posts.sortable.num.topic-list-data{
+    display: none;
+}
+th.views.sortable.num.topic-list-data{
+    display: none;
+}
+th.activity.sortable.num.topic-list-data{
+    display: none;
+}
+td.num.views.topic-list-data{
+    display:none;
+}
+}
+if TopicInformation=="RemoveBoth"{
 td.num.topic-list-data.age.activity{
       display:none;  
     }
@@ -549,7 +592,7 @@ td.num.posts-map.posts.topic-list-data{
 }
 th.posts.sortable.num.topic-list-data{
     display: none;
-}chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/edit.html?id=707
+}
 th.views.sortable.num.topic-list-data{
     display: none;
 }
@@ -559,21 +602,38 @@ th.activity.sortable.num.topic-list-data{
 td.num.views.topic-list-data{
     display:none;
 }
-}
-
-if RevTags{
+.topic-list .topic-list-data.posters{display: none;}
+    }
+    
+if TopicTagInformation=="RemoveNonSubcategoryTags"{
 td.main-link.clearfix.topic-list-data > div > div{
-    display:none;
-}
-}
-if SubCatTags{
-    td.main-link.clearfix.topic-list-data > div > a{
         display:none;
     }
 }
+if TopicTagInformation=="RemoveCategoryTags"{
+td.main-link.clearfix.topic-list-data > div > a{
+        display:none;
+    }
+}
+if TopicTagInformation=="RemoveBoth"{
+td.main-link.clearfix.topic-list-data > div > div{
+        display:none;
+    }
+td.main-link.clearfix.topic-list-data > div > a{
+        display:none;
+    }
 }
 
-@-moz-document url-prefix("https://devforum.roblox.com/c/updates/"){
+if CategoryInfo=="RemoveBoth"{
+    if CategoryTopicInfo=="RemoveBoth"{
+     .categories-list .category h3, .categories-list .category h4{
+         margin-bottom: 0.15em;}
+}
+}
+}
+}
+
+@-moz-document url-prefix("https://devforum.roblox.com/c/"){
 if SubCat{   
 table:nth-child(1){display:none;}
 }
