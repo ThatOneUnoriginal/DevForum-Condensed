@@ -1,3 +1,34 @@
+## Update 1.6
+* Condensed Bages Section
+* Condensed User Card Popup
+* Expanded Message/Post/Topic Creation Popup
+* Footer Now Stretches Across Entire Screen
+* Condensed Topic Information Popout
+* Collapse Replies Button Moved Slightly to Not Cover Up Profile Pictures
+* Condensed Report Post Popout
+* Opening Menu Panel Should No Longer Make Page be Able to be Scrolled Horizontally'
+* Category/Sub Category Names no Longer get Cut Off
+* Changed ThemeType to LogoThemeType to Hopefully Prevent Confusion
+
+## Update 1.5
+* Ability to Disable Condensing/Style 
+* Abilty to change Font Size with ``FontSize``
+* Ability to change Font Weight with ``FontWeight``
+* Ability to change Font Type with ``FontType``
+* Added Alternative Topic Progress Bar to ``RemoveSlider`` 
+* Formatting Changes to Make Expanding Replies Look Better
+* Ability to Change between Removing Category Descriptions, Sub Category Listings, or Both with ``CategoryInfo``
+	- Removed the ``RevDesc`` Variable
+* Ability to Change between Removing Latest Topics, Category Topics Info, or Both with ``CategoryTopicInfo``
+	- Removed the ``RevLatest`` Variable
+* Ability to Change between Removing Frequent/Original Poster Images, Replies/Views/Activity, or Both with ``TopicInformation``
+	- Removed the ``RevPosterImgs`` Variable
+	- Removed the ``TopicStats`` Variable
+* Ability to Change between Removing Non-Subcategory Tags, Subcategory Tags, or Both with ``TopicTagInformation``
+	- Removed ``RevTags`` Variable
+	- Removed ``SubCatTags`` Variable
+* Ability to Disable Every Style Customisation Except Wide Posts (and a few others) with ``WidePostOnly``
+
 ## Update 1.4
 * Ability to Remove Footer
    - Can choose between removing Suggested Topics, External Links, or Both
