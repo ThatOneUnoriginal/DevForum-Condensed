@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name         DevForum Condensed
-@version      v1.5
+@version      v1.6
 @namespace    userstyles.world/user/ThatOneUnoriginal
 @description  Increases the width of topic posts, removes the margins and padding from multiple elements, and slightly changes the appearance.
 @author       ThatOneUnoriginal
 @license      MIT License
 @preprocessor   stylus
 
-@var checkbox WidePostOnly "Remove Condensing of Elements" 0
-@var checkbox UseCustLogo "Use Custom Logo" 1
-@var select ThemeType "Theme Logo" ["Light", "LightAlt", "Dark", "DarkAlt", "GreyAmber", "RobloxDark","Intersex", "Transgender", "NonBinary", "Pride", "Bisexual", "Lesbian", "Pansexual", "ManGayPride" ]
+@var checkbox WidePostOnly "❌ Remove Condensing of Elements" 0
+@var checkbox UseCustLogo "🎨 Use Custom Logo" 1
+@var select LogoThemeType "🎨 Theme Logo" ["Light", "LightAlt", "Dark", "DarkAlt", "GreyAmber", "RobloxDark","Intersex", "Transgender", "NonBinary", "Pride", "Bisexual", "Lesbian", "Pansexual", "ManGayPride" ]
 
 
 @var checkbox UnUglify "😷 Make Dark Theme Less Ugly" 0
@@ -36,6 +36,7 @@
     --topic-body-width: 500000px;
     --d-max-width: 5110px; 
 }
+#reply-control{max-width: 99%;}
 body{
     font-size: FontSize !important; font-weight: FontWeight !important;
 }
@@ -44,6 +45,9 @@ body{
     --font-family: FontType, sans-serif;
     --heading-font-family: FontType, sans-serif !important;
 }
+body, h1, h2, h3, h4, h5, h6, span{
+    font-family: FontType;}
+    
 :root{
 --topic-body-width-padding: 4px;
 }
@@ -51,7 +55,7 @@ if WidePostOnly=="0"{
 header{height: 57px !important;}
 .MuiGrid-spacing-xs-1 > .MuiGrid-item{padding: 0px;}
 .jss3{padding: 0px 24px;}
-.MuiGrid-container{width: 70%;}
+.MuiGrid-container{width: 100%;}
 [class*="archetype-"]{--below-topic-margin: 0em;}
 #topic-footer-buttons .pinned-button, #topic-footer-buttons .topic-notifications-button{margin: -0.2em 0em;}
 #topic-footer-buttons .topic-footer-main-buttons button, #topic-footer-buttons .topic-footer-main-buttons details{margin-right: 0.3em;}
@@ -129,12 +133,27 @@ div.topic-avatar > div > div{display: none !important;}
 p{margin-block-end: 0.5em; margin-block-start: 0.5em}
 .user-menu .quick-access-panel{padding-top: 0em;}
 .menu-panel{padding: 0em;}
-.wrap{padding: 0 5px}
+.wrap{padding: 5px 10px}
 h1, h2, h3, h4, h5, h6{margin-bottom: 0rem;}
-div.menu-links-header .menu-links-row .glyphs button{padding: 0.4em}
+div.menu-links-header .menu-links-row .glyphs button{padding: 0.4em;}
+.embedded-posts .collapse-down, .embedded-posts .collapse-up{margin: 0px 0px 0px -20px;}
+.badge-card .badge-contents .badge-info{padding: 0 0;}
+.user-card .card-row:not(.first-row), .group-card .card-row:not(.first-row){margin-top: 0em;}
+.user-card-metadata-outlet.accepted-answers{display: none;}
+.user-card .card-content, .group-card .card-content{padding: 5px}
+.user-main{margin-bottom: 0;}
+.select-kit .select-kit-row{padding: 0.2em;}
+aside.onebox{padding: 0em 0em 0.5em 1em;}
+.topic-map .avatars, .topic-map .links, .topic-map .information{padding: 2px;}
+.fixed-modal:not(.history-modal) .modal-body:not(.reorder-categories):not(.poll-ui-builder):not(.poll-breakdown){padding:0.3em}
+.controls>.radio:first-child, .controls>.checkbox:first-child{padding-top: 2px}
+.modal-footer{padding: 6px 0px 0px 5px}
+.modal-header{padding: 4px 4px}
+.badge-wrapper .badge-category .category-name{text-overflow: unset; overflow: visible;}
+.topic-list .link-bottom-line .discourse-tags{padding-left: 3em;}
 } 
 if UseCustLogo{
-    if ThemeType=="Light"{
+    if LogoThemeType=="Light"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -150,19 +169,19 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/iKk71b4.png);
+    background-image: url(https://i.imgur.com/iKk71b4.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
 }
     }
-    if ThemeType=="LightAlt"{
+    if LogoThemeType=="LightAlt"{
 .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/bib4Myc.png);
+    background-image: url(https://i.imgur.com/bib4Myc.png);
     width: 187px !important;
     height: 40px !important;
     padding-left: 487px;
@@ -173,19 +192,19 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/6Xhgjtz.png);
+    background-image: url(https://i.imgur.com/6Xhgjtz.png) !important;
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Dark"{
+    if LogoThemeType=="Dark"{
 .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/SnYF7hI.png);
+    background-image: url(https://i.imgur.com/SnYF7hI.png);
     width: 187px !important;
     height: 40px !important;
     padding-left: 487px;
@@ -195,14 +214,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/B7XqvNZ.png);
+    background-image: url(https://i.imgur.com/B7XqvNZ.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
 }
     }
-     if ThemeType=="DarkAlt"{
+     if LogoThemeType=="DarkAlt"{
          .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -217,14 +236,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/zRrDyEU.png);
+    background-image: url(https://i.imgur.com/zRrDyEU.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
 }
      }
-    if ThemeType=="GreyAmber"{
+    if LogoThemeType=="GreyAmber"{
 .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -240,14 +259,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/bbahpuv.png);
+    background-image: url(https://i.imgur.com/bbahpuv.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
 }
     }
-    if ThemeType=="RobloxDark"{
+    if LogoThemeType=="RobloxDark"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -263,14 +282,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/QEq6elZ.png);
+    background-image: url(https://i.imgur.com/QEq6elZ.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Intersex"{
+    if LogoThemeType=="Intersex"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -286,14 +305,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/Aj3BT0b.png);
+    background-image: url(https://i.imgur.com/Aj3BT0b.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Transgender"{
+    if LogoThemeType=="Transgender"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -309,14 +328,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/lOmot14.png);
+    background-image: url(https://i.imgur.com/lOmot14.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="NonBinary"{
+    if LogoThemeType=="NonBinary"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -332,14 +351,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/jikaert.png);
+    background-image: url(https://i.imgur.com/jikaert.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Pride"{
+    if LogoThemeType=="Pride"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -355,14 +374,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/TxX6TUK.png);
+    background-image: url(https://i.imgur.com/TxX6TUK.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Bisexual"{
+    if LogoThemeType=="Bisexual"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -378,14 +397,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/IYWvGsj.png);
+    background-image: url(https://i.imgur.com/IYWvGsj.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Lesbian"{
+    if LogoThemeType=="Lesbian"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -401,14 +420,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/eqoZK1K.png);
+    background-image: url(https://i.imgur.com/eqoZK1K.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="Pansexual"{
+    if LogoThemeType=="Pansexual"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -424,14 +443,14 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/Nyj5nzX.png);
+    background-image: url(https://i.imgur.com/Nyj5nzX.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
     background-size: 50px 40px;
         }
     }
-    if ThemeType=="ManGayPride"{
+    if LogoThemeType=="ManGayPride"{
         .logo-big, #site-logo:not(.logo-small) {
     display: block;
     -moz-box-sizing: border-box;
@@ -447,7 +466,7 @@ if UseCustLogo{
     display: block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(https://i.imgur.com/zVka07w.png);
+    background-image: url(https://i.imgur.com/zVka07w.png);
     width: 40px !important;
     height: 40px !important;
     padding-left: 50px;
@@ -468,6 +487,8 @@ if OpenDyslexic{
     --font-family: open-dyslexic, sans-serif;
     --heading-font-family: open-dyslexic, sans-serif !important;
 } 
+body, h1, h2, h3, h4, h5, h6, span{
+    font-family: open-dyslexic;}
 }
 
 if FooterType=="RemoveRecommended"{
