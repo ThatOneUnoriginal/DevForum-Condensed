@@ -6,21 +6,23 @@ DevForum Condensed is a User Style/Theme that modifies certain aspects of the Ro
 
 # Varibales
 This theme features multiple variants which the user can modify. Below is a list of all the variables, the available options, and what they change.
-| Variable Name | Variable Types| Modifies |
-| ------------- | ------------- | -------- |
-| UseCustLogo   | 1<br>0        | 1: Uses the Custom "DevForum Condensed" logo<br>0: Uses the Default Logo|
-| ThemeType     | Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<by>RobloxDark<br>Intersex<br>Transgender<br>NonBinary<br>Pride<br>Bisexual<br>Lesbian<br>Pansexual<br>ManGayPride| Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0|
-| UnUglify | 1<br>0 | 1: Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue<br>0: Uses the default Colours for Dark Theme| 
-| OpenDyslexic | 1<br>0 | 1: Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)<br>0: Keeps the font to the (style) default [Public Sans](https://fonts.google.com/specimen/Public+Sans)|
-| FooterType | Default<br>RemoveRecommended<br>RemoveExternalLinks<br>RemoveBoth | Default: Does Nothing<br>RemoveRecommended: Removes the Recommended Topics Under Topic Pages<br>RemoveExternalLinks: Removes the Roblox External Links Under All Pages<br>RemoveBoth: Removes Both|
-|RevDesc| 1<br>0| 1: Removes the Descriptions from Categories and Subcategories<br>0: Does Nothing|
-|RevLatest| 1<br>0| 1: Removes the Latest Section from Categories and Subcategories<br>0: Does Nothing |
-|RemoveSlider| 1<br>0|1: Removes the Right-Hand Slider from Topic Pages<br>0: Does Nothing|
-|RevPosterImgs| 1<br>0|1: Removes the Original Poster and Frequent Poster Avatar Images from Topic List<br>0: Does Nothing|
-|TopicStats| 1<br>0|1:Removes the Replies, Views, and Activity Sections of the Topic List<br>0: Does Nothing |
-|RevTags| 1<br>0|1: Removes the Tags Under Topic Names in Topic List<br>0: Does Nothing |
-|SubCatTags| 1<br>0|1: Removes the Sub Category Tags Under Topic Names in Topic List<br>0: Does Nothing|
-|SubCat| 1<br>0|1: Removes the Sub Categories When Viewing Categories<br>0: Does Nothing|
+| Variable Description | Variable Name | Variable Types | Modifies |
+| -------------------- | --------------| ---------------| -------- |
+| Remove Condensing of Elements | WidePostOnly | 0: OFF<br> 1: ON | **0:** All of the Modifiers are Applied<br>**1:** Disables Most of the Modifiers (Including Variable Related Ones) but keeps some Variables and Stretching of Content active) |
+| Use Custom Logo | UseCustLogo | 0: OFF<br> 1: ON | **0:** Uses Default Logo<br>**1:** Uses Custom DevForum Condensed Logo |
+| Theme Logo | ThemeType  |Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<br>RobloxDark<br>Intersex<br>Transgender<br>NonBinary<br>Pride<br>Bisexual<br>Lesbian<br>Pansexual<br>ManGayPride | Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0 |
+| 😷 Make Dark Theme Less Ugly | UnUglify | 0: OFF<br> 1: ON | **0:** Uses the default Colours for Dark<br>**1:** Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue |
+| 👁️ Swap Font to OpenDyslexic | OpenDyslexic | 0: OFF<br> 1: ON | **0:** Keeps the font to the (style) default [Public Sans](https://fonts.google.com/specimen/Public+Sans) (or whatever is selected for ``Font Type``<br>**1:** Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)
+| ❌ Footer | FooterType | Default<br>RemoveRecommended<br>RemoveExternalLinks<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveRecommended:** Removes the Recommended Topics Under Topic Pages<br>**RemoveExternalLinks:** Removes the Roblox External Links Under All Pages<br>**RemoveBoth:** Removes Both|
+| ❌ Topic Slider | RemoveSlider | 0: OFF<br> 1: ON | **0:** Does Nothing<br>**1:** Removes the Topic Progress Slider from Topic Pages |
+| ❌ Remove Sub Categories From List | SubCat | 0: OFF<br> 1: ON | **0:** Does Nothing<br>**1:** When Viewing Category pages, if the Category has Subcategories, it wont list them on the Category Page. | 
+| ❌ Category Information | CategoryInfo | Default<br>RemoveDescriptions<br>RemoveSubcatecorgyListings<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveDescriptions:** Removes the Descriptions from Categories and Subcategories<br>**RemoveSubcatecorgyListings:** Removes Subcategories list for Categories with Subcategories<br>**RemoveBoth:** Removes Both |
+| ❌ Category Topic Information | CategoryTopicInfo | Default<br>RemoveLatest<br>RemoveTopics<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveLatest:** Removes the Latest Section From the Category Listings<br>**RemoveTopics:** Removes the Topics Section From the Category Lisitngs |
+| ❌ Topic Information | TopicInformation | Default<br>RemoveLatest<br>RemoveTopics<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveLatest:** Removes the Latest Section in the Category Listings<br>**RemoveTopics:** Removes the Topics Section in the Category Listings<br>**Remove Both:** Removes Both |
+| ❌ Topic Tags | TopicTagInformation | Default<br>RemoveNonSubcategoryTags<br>RemoveCategoryTags<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveNonSubcategoryTags:** Removes the Non-Subcategory Tags Under Post Titles in Title List<br>**RemoveCategoryTags"** Removes the Subcategory Tags Under Post Titles in Title List<br>**RemoveBoth:** Removes Both |
+| 🔠 Font Size | FontSize | Default: 17px<br>Minimum: 0px<br>Maximum: 30px | Changes the Font Size |
+| 🔠 Font Weight | FontWeight | Default: 600<br>Minimum: 300<br>Maximum: 1000 | Changes the Font Weight |
+| 🔠 Font Type | FontType | Default: Public Sans | Changes the Font Type |
 
 Note: While switching font to OpenDyslexic is an option, I wouldn't recommend using this theme if you have dyslexia or other impairments that may make it more difficult to read/see. This stylus removes the spacing between multiple parts of the website, which may make it harder for such people to as easily use the website.
 
