@@ -6,23 +6,23 @@ DevForum Condensed is a User Style/Theme that modifies certain aspects of the Ro
 
 # Varibales
 This theme features multiple variants which the user can modify. Below is a list of all the variables, the available options, and what they change.
-| Variable Description | Variable Name | Variable Types | Modifies |
-| -------------------- | --------------| ---------------| -------- |
-| Remove Condensing of Elements | WidePostOnly | 0: OFF<br> 1: ON | **0:** All of the Modifiers are Applied<br>**1:** Disables Most of the Modifiers (Including Variable Related Ones) but keeps some Variables and Stretching of Content active) |
-| Use Custom Logo | UseCustLogo | 0: OFF<br> 1: ON | **0:** Uses Default Logo<br>**1:** Uses Custom DevForum Condensed Logo |
-| Theme Logo | ThemeType  |Light<br>LightAlt<br>Dark<br>DarkAlt<br>GreyAmber<br>RobloxDark<br>Intersex<br>Transgender<br>NonBinary<br>Pride<br>Bisexual<br>Lesbian<br>Pansexual<br>ManGayPride | Changes the Custom "DevForum Condensed" Logo Colour (to better fit theme choice and preference.) Will be ignored if UseCustLogo is 0 |
-| 😷 Make Dark Theme Less Ugly | UnUglify | 0: OFF<br> 1: ON | **0:** Uses the default Colours for Dark<br>**1:** Slightly Modifies the Dark Theme, Changing the Orangish Red Buttons/Highlights to Blue |
-| 👁️ Swap Font to OpenDyslexic | OpenDyslexic | 0: OFF<br> 1: ON | **0:** Keeps the font to the (style) default [Public Sans](https://fonts.google.com/specimen/Public+Sans) (or whatever is selected for ``Font Type``<br>**1:** Changes the font from [Public Sans](https://fonts.google.com/specimen/Public+Sans) to [OpenDyslexic](https://opendyslexic.org)
-| ❌ Footer | FooterType | Default<br>RemoveRecommended<br>RemoveExternalLinks<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveRecommended:** Removes the Recommended Topics Under Topic Pages<br>**RemoveExternalLinks:** Removes the Roblox External Links Under All Pages<br>**RemoveBoth:** Removes Both|
-| ❌ Topic Slider | RemoveSlider | 0: OFF<br> 1: ON | **0:** Does Nothing<br>**1:** Removes the Topic Progress Slider from Topic Pages |
-| ❌ Remove Sub Categories From List | SubCat | 0: OFF<br> 1: ON | **0:** Does Nothing<br>**1:** When Viewing Category pages, if the Category has Subcategories, it wont list them on the Category Page. | 
-| ❌ Category Information | CategoryInfo | Default<br>RemoveDescriptions<br>RemoveSubcatecorgyListings<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveDescriptions:** Removes the Descriptions from Categories and Subcategories<br>**RemoveSubcatecorgyListings:** Removes Subcategories list for Categories with Subcategories<br>**RemoveBoth:** Removes Both |
-| ❌ Category Topic Information | CategoryTopicInfo | Default<br>RemoveLatest<br>RemoveTopics<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveLatest:** Removes the Latest Section From the Category Listings<br>**RemoveTopics:** Removes the Topics Section From the Category Lisitngs |
-| ❌ Topic Information | TopicInformation | Default<br>RemoveLatest<br>RemoveTopics<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveLatest:** Removes the Latest Section in the Category Listings<br>**RemoveTopics:** Removes the Topics Section in the Category Listings<br>**Remove Both:** Removes Both |
-| ❌ Topic Tags | TopicTagInformation | Default<br>RemoveNonSubcategoryTags<br>RemoveCategoryTags<br>RemoveBoth | **Default:** Does Nothing<br>**RemoveNonSubcategoryTags:** Removes the Non-Subcategory Tags Under Post Titles in Title List<br>**RemoveCategoryTags"** Removes the Subcategory Tags Under Post Titles in Title List<br>**RemoveBoth:** Removes Both |
-| 🔠 Font Size | FontSize | Default: 17px<br>Minimum: 0px<br>Maximum: 30px | Changes the Font Size |
-| 🔠 Font Weight | FontWeight | Default: 600<br>Minimum: 300<br>Maximum: 1000 | Changes the Font Weight |
-| 🔠 Font Type | FontType | Default: Public Sans | Changes the Font Type |
+
+| Variable Name | Variable Conditions | Modifies |
+| --------------| ---------------| -------- |
+| ❌ Disable Condensing of Elements | **0**<br>1 | This will disable all of the condensing of elements and keep just the wide-posts feature enabled |
+| 🎨 Logo Type | **Default**<br>Light<br>RobloxLight<br>Dark<br>DarkAlt<br>GreyAmber<br>RobloxDark<br>Pride | Changes the DevForum Icon and Logo to a custom "DevForum Condensed" logo. **Note that this doesn't work on v1.7 or prior due to changes Roblox made to the interface** |
+| Modify Font | **0**<br>1 | This will apply any and all changes made with Font Size, Font Weight and Font Type |
+| 🔠 Font Size | Default: 17 | This will change the font size. **Note you need modify font _enabled_ for this to work.**  | 
+| 🔠 Font Weight | Default: 600 | This will change the weight of the font. **Note you need modify font _enabled_ for this to work.** |
+| Font Type | Defaalt: Source Sans 3 | This will change the font that is used. **Note you need modify font _enabled_ for this to work.** |
+| ❌ Footer | **Default**<br>Remove Recommended<bR>Remove External Links<br>Remove Both | This will remove the "Suggested Topics" section, External Links Footer, or both |
+| ❌ Topic Slider | **0**<br>1 | Removes the Topic Slider that Appears When Going Through Posts/Toptics |
+| ❌ Remove Sub Categories From List | **0**<br>1 | When viewing a category that features subcategories, this will disable the "category" listing for the subcategories from listing |
+| ❌ Category Information | **Default**<br>Remove Descriptions<br>Remove Subcategory Listings<br>Remove Both | When viewing the categories list, it will remove either the categort descriptions, subcategories list (if applicable) or both. | 
+| ❌ Category Topic Information | **Default**<br>Remove Latest<br>Remove Topics<br>Remove Both | When viewing a category, it will remove the "latest" section, "topics" section or both |
+| ❌ Topic Information | Default<br>Remove Original/Frequent Posters<br>Remove Replies, Views, and Activity<br>Remove Both | When viewing the topic list, this will remove the original/frequent posters section, the replies + views + activity section, or both |
+| ❌ Topic Tags | Default<br>Remove Non-subcategory Tags<br>Remove category tags<br>Remove Both | When viewing the topics list this will remove the topic tags, category tags, or both |
+| ❌ Remove Creator Topbar | 0<br>1 | This will remove the  Creator Hub Top Bar |
 
 Note: While switching font to OpenDyslexic is an option, I wouldn't recommend using this theme if you have dyslexia or other impairments that may make it more difficult to read/see. This stylus removes the spacing between multiple parts of the website, which may make it harder for such people to as easily use the website.
 
