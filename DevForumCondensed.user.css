@@ -1,63 +1,82 @@
 /* ==UserStyle==
 @name         DevForum Condensed
-@version      v1.6
+@version      v1.7
 @namespace    userstyles.world/user/ThatOneUnoriginal
 @description  Increases the width of topic posts, removes the margins and padding from multiple elements, and slightly changes the appearance.
 @author       ThatOneUnoriginal
 @license      MIT License
 @preprocessor   stylus
 
-@var checkbox WidePostOnly "❌ Remove Condensing of Elements" 0
-@var checkbox UseCustLogo "🎨 Use Custom Logo" 1
-@var select LogoThemeType "🎨 Theme Logo" ["Light", "LightAlt", "Dark", "DarkAlt", "GreyAmber", "RobloxDark","Intersex", "Transgender", "NonBinary", "Pride", "Bisexual", "Lesbian", "Pansexual", "ManGayPride" ]
+@var checkbox Config "❌ Disable Condensing of Elements" 0
+@var select LogoType "🎨 Logo Type" ["Default", "Light", "RobloxLight", "Dark", "DarkAlt", "GreyAmber", "RobloxDark", "Pride"]
+@var checkbox FixDarkMode "Change Dark Mode Colouring" 0
+@var checkbox DevForumPlus "Make Combatiable With DevForum+" 0
+@var checkbox FCust "Modify Font" 0
+@var number FSize "🔠 Font Size" [17, 0, 30, 1, 'px']
+@var number FWeight "🔠 Font Weight" [600, 300, 1000, 10]
+@var text FType "Font Type" Source Sans 3
 
-
-@var checkbox UnUglify "😷 Make Dark Theme Less Ugly" 0
-@var checkbox OpenDyslexic "👁️ Swap Font to OpenDyslexic" 0
-@var select FooterType "❌ Footer" ["Default", "RemoveRecommended", "RemoveExternalLinks", "RemoveBoth"]
-@var checkbox RemoveSlider "❌ Topic Slider" 0
+@var select FootType "❌ Footer" ["Default", "RemoveRecommended", "RemoveExternalLinks", "RemoveBoth"]
+@var checkbox Slider "❌ Topic Slider" 0
 @var checkbox SubCat "❌ Remove Sub Categories From List" 0
-@var select CategoryInfo "❌ Category Information" ["Default", "RemoveDescriptions", "RemoveSubcatecorgyListings", "RemoveBoth"]
-@var select CategoryTopicInfo "❌ Category Topic Information" ["Default", "RemoveLatest", "RemoveTopics", "RemoveBoth"]
-@var select TopicInformation "❌ Topic Information" ["Default", "RemoveOriginalFrequentPosters", "RemoveRepliesViewsAndActivity", "RemoveBoth"]
-@var select TopicTagInformation "❌ Topic Tags" ["Default", "RemoveNonSubcategoryTags", "RemoveCategoryTags", "RemoveBoth"]
-@var number FontSize "🔠 Font Size" [17, 0, 30, 1, 'px']
-@var number FontWeight "🔠 Font Weight" [600, 300, 1000, 10]
-@var text FontType "Font Type" Public Sans
+@var select CatInfo "❌ Category Information" ["Default", "RemoveDescriptions", "RemoveSubcatecorgyListings", "RemoveBoth"]
+@var select CatTopInfo "❌ Category Topic Information" ["Default", "RemoveLatest", "RemoveTopics", "RemoveBoth"]
+@var select TopInfo "❌ Topic Information" ["Default", "RemoveOriginalFrequentPosters", "RemoveRepliesViewsAndActivity", "RemoveBoth"]
+@var select TopTag "❌ Topic Tags" ["Default", "RemoveNonSubcategoryTags", "RemoveCategoryTags", "RemoveBoth"]
+@var checkbox Creator "❌ Remove Creator Topbar" 0
+
+
 
 ==/UserStyle== */
 
-
-@-moz-document domain("devforum.roblox.com"){ 
-@import url('https://fonts.cdnfonts.com/css/open-dyslexic');
-@import url('https://<span></span>fonts.googleapis.com/css?family=Public+Sans')
-    
-:root {
-    --topic-body-width: 500000px;
-    --d-max-width: 5110px; 
-}
+@-moz-document domain("devforum.roblox.com"){ @import url('https://fonts.cdnfonts.com/css/open-dyslexic'); @import url('https://fonts.googleapis.com/css?family=Source+Sans+3')
+:root {--topic-body-width: 500000px;--d-max-width: 5110px; }
 #reply-control{max-width: 99%;}
-body{
-    font-size: FontSize !important; font-weight: FontWeight !important;
-}
+if FCust == 1{
+body{font-size: FSize !important; font-weight: FWeight !important;
+--font-family: FType !important, sans-serif !important;
+    --heading-font-family: FType, sans-serif !important;}}
+
     
-:root{
-    --font-family: FontType, sans-serif;
-    --heading-font-family: FontType, sans-serif !important;
-}
-body, h1, h2, h3, h4, h5, h6, span{
-    font-family: FontType;}
-    
-:root{
---topic-body-width-padding: 4px;
-}
-if WidePostOnly=="0"{
-header{height: 57px !important;}
+    if LogoType=="Light"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Big_LightMode.png?raw=true);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Small_LightMode.png?raw=true);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+    if LogoType=="RobloxLight"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Big_RobloxLightt.png?raw=true);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small{display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Small_RobloxLight.png?raw=true) !important;width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+    if LogoType=="GreyAmber"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;
+box-sizing: border-box;background: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Big_GreyAmebr.png?raw=true);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;
+box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Small_GreyAmebr.png?raw=true);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+    if LogoType=="RobloxDark"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumsCondensed_Big_RobloxDark.png?raw=true);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Small_RobloxDark.png?raw=true);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+    if LogoType=="Pride"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Big_Pride.png?raw=true);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://github.com/ThatOneUnoriginal/DevForum-Condensed/blob/main/Images/DevForumCondensed_Small_Pride.png?raw=true);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+ if LogoType=="Dark"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background: url(https://i.imgur.com/RVSMHNq.png);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://i.imgur.com/zRrDyEU.png);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+ if LogoType=="DarkAlt"{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://i.imgur.com/SnYF7hI.png);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://i.imgur.com/B7XqvNZ.png);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}
+
+body{--topic-body-width-padding: 4px;}
+if FCust = 1{body, h1, h2, h3, h4, h5, h6, span{font-family: FType !important;}}
+if Config=="0"{
+header{height: 4em !important;}
 .MuiGrid-spacing-xs-1 > .MuiGrid-item{padding: 0px;}
 .jss3{padding: 0px 24px;}
 .MuiGrid-container{width: 100%;}
 [class*="archetype-"]{--below-topic-margin: 0em;}
-#topic-footer-buttons .pinned-button, #topic-footer-buttons .topic-notifications-button{margin: -0.2em 0em;}
+#topic-footer-buttons .pinned-button, #topic-footer-buttons .topic-notifications-button{margin: 0.4em 0em;}
 #topic-footer-buttons .topic-footer-main-buttons button, #topic-footer-buttons .topic-footer-main-buttons details{margin-right: 0.3em;}
 button, select{text-transform: lowercase;}
 .topic-list .topic-list-data:first-of-type{padding-left: 0px}
@@ -86,6 +105,7 @@ div.menu-links-header .menu-links-row .glyphs{width: 25%;}
 .stats-title{margin-bottom: 0px;}
 .top-categories-section table td, .top-categories-section table th{padding: 0.01em;}
 .badge-card .badge-contents .badge-icon{margin-right: 0em;}
+.badge-card{height: 6em}
 .badge-card .badge-contents {min-height: 0em; padding: 0 0em;}
 .badge-group-list{grid-gap: 0.2em; margin-bottom: 0em;}
 .nav-stacked a{padding:0.1em;}
@@ -107,13 +127,13 @@ form{padding: 0 0 0px;}
 .user-preferences .tracking-controls{margin-top: 0px;}
 .topic-map .map li{padding: 0px 2px;}
 .topic-map{margin: 0px 0px var(--topic-body-width-padding)}
-.post-links-container .post-links li:last-of-type{margin-bottom: 0em;}
+.post-links-container .post-links li:last-of-type{margin-bottom: 1em;}
 .post-links-container ul li{margin-bottom: 0em;}
 .post-links-container{margin-left: 0em;}
 .post-menu-area{margin: -3px 0;}
 #topic-title{margin-bottom: 0em;}
 .timeline-container .topic-timeline .timeline-footer-controls{margin-top: 0em;}
-.timeline-container .topic-timeline .timeline-scrollarea{margin-top:0.2em;}
+.timeline-container .topic-timeline .timeline-scrollarea{margin-top:0.5em;}
 .timeline-container .topic-timeline .timeline-scroller .back-button{margin-top: 0em;}
 .timeline-container .topic-timeline .timeline-footer-controls .reply-to-post{margin-right: 0.3em;}
 nav.post-controls .actions button.create{margin-left: -0.4em}   
@@ -150,512 +170,63 @@ aside.onebox{padding: 0em 0em 0.5em 1em;}
 .modal-footer{padding: 6px 0px 0px 5px}
 .modal-header{padding: 4px 4px}
 .badge-wrapper .badge-category .category-name{text-overflow: unset; overflow: visible;}
+if LogoType != "Default"{
 .topic-list .link-bottom-line .discourse-tags{padding-left: 3em;}
-} 
-if UseCustLogo{
-    if LogoThemeType=="Light"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/irOR4Rl.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
+if FixDarkMode{
+:root{--quaternary: var(--tertiary);--highlight-medium: #063648;--quaternary-low: #0b103a !important;}
+    if LogoType !=Default{
+.logo-big, #site-logo:not(.logo-small) {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://i.imgur.com/SnYF7hI.png);width: 187px !important;height: 40px !important;padding-left: 487px;background-size: 487px 40px;
+    }}
+.logo-small {display: block;-moz-box-sizing: border-box;box-sizing: border-box;background-image: url(https://i.imgur.com/B7XqvNZ.png);width: 40px !important;height: 40px !important;padding-left: 50px;background-size: 50px 40px;}}}
+if FootType=="RemoveRecommended"{#suggested-topics{display:none;}}
+if FootType=="RemoveExternalLinks"{#footer_rbx > div{display:none;}}
+if FootType=="RemoveBoth"{#footer_rbx > div{display:none;}#suggested-topics{display:none;}}
+td.main-link.clearfix.topic-list-data > a{display: none;}if Slider{.timeline-container{display:none;}#topic-progress{display:none;}}
+if CatInfo=="RemoveDescriptions"{.categories-list .category h3, .categories-list .category h4{margin-bottom: 0.1em;}div.category-description{display: none;}}
+if CatInfo=="RemoveSubcatecorgyListings"{div.subcategories{display:none;}}
+if CatInfo=="RemoveBoth"{div.category-description{display: none;}div.subcategories{display:none;}}
+if CatTopInfo=="RemoveLatest"{td.latest{display:none;}th.latest{display: none;}}
+if CatTopInfo=="RemoveTopics"{td.topics{display: none;}th.topics{display: none;}}    
+if CatTopInfo=="RemoveBoth"{td.topics{display: none;}td.latest{display:none;}th.latest{display: none;}th.topics{display: none;}}
+if TopInfo=="RemoveOriginalFrequentPosters"{.topic-list .topic-list-data.posters{display: none;}}
+if TopInfo=="RemoveRepliesViewsAndActivity"{td.num.topic-list-data.age.activity{display:none;}
+td.num.views.heatmap-high.topic-list-data{display: none;}
+td.num.posts-map.posts.heatmap-high.topic-list-data{display: none;}
+td.num.views.heatmap-med.topic-list-data{display: none;}
+td.num.posts-map.posts.topic-list-data{display: none;}
+th.posts.sortable.num.topic-list-data{display: none;}
+th.views.sortable.num.topic-list-data{display: none;}
+th.activity.sortable.num.topic-list-data{display: none;}
+td.num.views.topic-list-data{display:none;}}
+if TopInfo=="RemoveBoth"{
+td.num.topic-list-data.age.activity{display:none;  }
+td.num.views.heatmap-high.topic-list-data{display: none;}
+td.num.posts-map.posts.heatmap-high.topic-list-data{display: none;}
+td.num.views.heatmap-med.topic-list-data{display: none;}
+td.num.posts-map.posts.topic-list-data{display: none;}
+th.posts.sortable.num.topic-list-data{display: none;}
+th.views.sortable.num.topic-list-data{display: none;}
+th.activity.sortable.num.topic-list-data{display: none;}
+td.num.views.topic-list-data{display:none;}
+.topic-list .topic-list-data.posters{display: none;}}
+if TopTag=="RemoveNonSubcategoryTags"{td.main-link.clearfix.topic-list-data > div > div{display:none;}}
+if TopTag=="RemoveCategoryTags"{td.main-link.clearfix.topic-list-data > div > a{display:none;}}
+if TopTag=="RemoveBoth"{td.main-link.clearfix.topic-list-data > div > div{display:none;}
+td.main-link.clearfix.topic-list-data > div > a{display:none;}}
+if CatInfo=="RemoveBoth"{if CatTopInfo=="RemoveBoth"{.categories-list .category h3, .categories-list .category h4{margin-bottom: 0.15em;}}}
+/*Does about the same thing as DevForum Plus Compatability Option*/
+if DevForumPlus = 1{
+    .badge-card:hover{scale: 100% !important;}
+    .user-card .badge-section .user-badge:hover, .user-card .badge-section .more-user-badges a:hover{scale: 100% !important;margin-right:0px !important;margin-left:0px !important}
+}}
+.onebox.video-onebox, .video-container{
+    padding: 0 0 25.25% 0px;
+    width: 50%
 }
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/iKk71b4.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-}
-    }
-    if LogoThemeType=="LightAlt"{
-.logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/bib4Myc.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/6Xhgjtz.png) !important;
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Dark"{
-.logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/SnYF7hI.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/B7XqvNZ.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-}
-    }
-     if LogoThemeType=="DarkAlt"{
-         .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/RVSMHNq.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/zRrDyEU.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-}
-     }
-    if LogoThemeType=="GreyAmber"{
-.logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/Hl5cMQH.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/bbahpuv.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-}
-    }
-    if LogoThemeType=="RobloxDark"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/Mi6D681.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/QEq6elZ.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Intersex"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/DpnJWnF.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/Aj3BT0b.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Transgender"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/qfMKcTh.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/lOmot14.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="NonBinary"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/y5hVbeU.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/jikaert.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Pride"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/umdnerl.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/TxX6TUK.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Bisexual"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/QmSzVH6.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/IYWvGsj.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Lesbian"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/3PelKmq.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/eqoZK1K.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="Pansexual"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/wOOnMpD.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/Nyj5nzX.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-    if LogoThemeType=="ManGayPride"{
-        .logo-big, #site-logo:not(.logo-small) {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(https://i.imgur.com/HDzSIQC.png);
-    width: 187px !important;
-    height: 40px !important;
-    padding-left: 487px;
-    background-size: 487px 40px;
-}
-
-.logo-small {
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(https://i.imgur.com/zVka07w.png);
-    width: 40px !important;
-    height: 40px !important;
-    padding-left: 50px;
-    background-size: 50px 40px;
-        }
-    }
-}
-if WidePostOnly=="0"{
-if UnUglify{
-   :root{
-       --quaternary: var(--tertiary);
-       --highlight-medium: #063648;
-       --quaternary-low: #0b103a;
-   }
-}
-if OpenDyslexic{
-   :root{
-    --font-family: open-dyslexic, sans-serif;
-    --heading-font-family: open-dyslexic, sans-serif !important;
-} 
-body, h1, h2, h3, h4, h5, h6, span{
-    font-family: open-dyslexic;}
-}
-
-if FooterType=="RemoveRecommended"{
-    #suggested-topics{display:none;}
-    }
-if FooterType=="RemoveExternalLinks"{
-    #footer_rbx > div{display:none;}
-    }
-if FooterType=="RemoveBoth"{
-    #footer_rbx > div{display:none;}
-    #suggested-topics{display:none;}
-
-}
-
-td.main-link.clearfix.topic-list-data > a{display: none;}
-if RemoveSlider{
-    .timeline-container{display:none;}
-    #topic-progress{display:none;}
-
-    }
-
-if CategoryInfo=="RemoveDescriptions"{
-    .categories-list .category h3, .categories-list .category h4{
-        margin-bottom: 0.1em;
-    }
-    
-    div.category-description{
+.group-details-container{padding:5px;}
+if Creator == 1{
+   #creator_hub_navigation_rbx{
        display: none;
-    }
-}
-if CategoryInfo=="RemoveSubcatecorgyListings"{
-    div.subcategories{
-        display:none;
-            }
-        }
-    
-if CategoryInfo=="RemoveBoth"{
-    div.category-description{
-       display: none;
-    }
-    div.subcategories{
-        display:none;
-        }
-    }
-if CategoryTopicInfo=="RemoveLatest"{
-    td.latest{
-        display:none;
-    }
-    th.latest{
-        display: none;
-    }
-}
-if CategoryTopicInfo=="RemoveTopics"{
-    td.topics{
-        display: none;
-    }
-    th.topics{
-        display: none;
-    }
-}    
-if CategoryTopicInfo=="RemoveBoth"{
-    td.topics{
-        display: none;
-    }
-    td.latest{
-        display:none;
-    }
-    th.latest{
-        display: none;
-    }
-    th.topics{
-        display: none;
-    }
-}
-if TopicInformation=="RemoveOriginalFrequentPosters"{
-    .topic-list .topic-list-data.posters{display: none;}
-    }
-if TopicInformation=="RemoveRepliesViewsAndActivity"{
-    td.num.topic-list-data.age.activity{
-      display:none;  
-    }
-td.num.views.heatmap-high.topic-list-data{
-    display: none;
-}
-td.num.posts-map.posts.heatmap-high.topic-list-data{
-    display: none;
-}
-td.num.views.heatmap-med.topic-list-data{
-    display: none;
-}
-td.num.posts-map.posts.topic-list-data{
-    display: none;
-}
-th.posts.sortable.num.topic-list-data{
-    display: none;
-}
-th.views.sortable.num.topic-list-data{
-    display: none;
-}
-th.activity.sortable.num.topic-list-data{
-    display: none;
-}
-td.num.views.topic-list-data{
-    display:none;
-}
-}
-if TopicInformation=="RemoveBoth"{
-td.num.topic-list-data.age.activity{
-      display:none;  
-    }
-td.num.views.heatmap-high.topic-list-data{
-    display: none;
-}
-td.num.posts-map.posts.heatmap-high.topic-list-data{
-    display: none;
-}
-td.num.views.heatmap-med.topic-list-data{
-    display: none;
-}
-td.num.posts-map.posts.topic-list-data{
-    display: none;
-}
-th.posts.sortable.num.topic-list-data{
-    display: none;
-}
-th.views.sortable.num.topic-list-data{
-    display: none;
-}
-th.activity.sortable.num.topic-list-data{
-    display: none;
-}
-td.num.views.topic-list-data{
-    display:none;
-}
-.topic-list .topic-list-data.posters{display: none;}
-    }
-    
-if TopicTagInformation=="RemoveNonSubcategoryTags"{
-td.main-link.clearfix.topic-list-data > div > div{
-        display:none;
-    }
-}
-if TopicTagInformation=="RemoveCategoryTags"{
-td.main-link.clearfix.topic-list-data > div > a{
-        display:none;
-    }
-}
-if TopicTagInformation=="RemoveBoth"{
-td.main-link.clearfix.topic-list-data > div > div{
-        display:none;
-    }
-td.main-link.clearfix.topic-list-data > div > a{
-        display:none;
-    }
-}
-
-if CategoryInfo=="RemoveBoth"{
-    if CategoryTopicInfo=="RemoveBoth"{
-     .categories-list .category h3, .categories-list .category h4{
-         margin-bottom: 0.15em;}
-}
-}
-}
-}
-
-@-moz-document url-prefix("https://devforum.roblox.com/c/"){
-if SubCat{   
-table:nth-child(1){display:none;}
-}
-}
+   } 
+}}
+@-moz-document url-prefix("https://devforum.roblox.com/c/"){if SubCat{table:nth-child(1){display:none;}}}
