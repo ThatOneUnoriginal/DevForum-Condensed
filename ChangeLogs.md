@@ -1,3 +1,51 @@
+## Update 1.7
+* Renamed Variables
+   - Renamed FontType Variable to "FType"
+   - Renamed FontWeight Variable to "FWeight"
+   - Renamed FontSize Variable to "FSize"
+   - Renamed "TopicTagInformation" to "TopTag"
+   - Renamed "TopicInformation" to "TopInfo"
+   - Renamed "CategoryTopicInfo" to "CatTopInfo"
+   - Renamed "CategoryInfo" to "CatInfo"
+   - Renamed "Slider" to "Slider"
+   - Renamed "FooterType" to "FootType"
+   - Renamed "WidePostOnly" to "Config" and Description to "Disable Condensing of Elements"
+   - Renamed UnUglify to "FixDarkMode" and description to "Change Dark Mode Coloring"
+* Font Changes
+   - Replaced Public Sans with Source Sans 3
+   - Fixed Issue With "FontType" to ensure its applied (note that custom font changes on other themes will fail.)
+   - Added a "CustomFont" Variable; This will allow users to insert custom fonts with the theme
+   - Removed OpenDyslexic Variable; Users can still choose "OpenDyslexic" by changing "FontType"
+ * Moved DevForum Logos From Imgur to DevForum Condensed GitHub Repo **(Note that Recent Changes to the Roblox DevForum Interface have broken the Custom Logo Feature)**
+ * Combined "UseCustLogo" and "LogoThemeType" into a singular "LogoType"
+    - The Options Now
+    	- Default (The Developer Form Branding)  
+    	- Light (The Developer Condensed Logo in Black Coloring) 
+    	- RobloxLight (Previously LightAlt; The Developer Condensed Logo in Light Blue Coloring)
+	- Dark (Previously DarkAlt; The Developer Condensed Logo in White Coloring)
+      	- GreyAmber (The Developer Condensed Logo in Yellow Colouring)
+      	- RobloxDark (The Developer Condensed Logo in Dark Blue Coloring)
+      	- Pride (The Developer Condensed Logo in LGBTQ+ Branding)
+      	- DarkAlt (The Developer Condensed Logo in White Coloring)
+   -  Removed several LGBTQ+ Related Options  
+	 - Removed Intersex Logo Option
+  	 - Removed Transgender Logo Option
+    	 - Remove NonBinary Logo Option
+      	 - Removed Bisexual Logo Option
+         - Removed Lesbian Logo Option
+         - Removed Pansexual Logo Option
+         - Removed ManGayPride Logo Option
+* Added Dark option from "LogoThemeType" (now "LogoType") with "UnUglify" (Now "FixDarkMode", Overturns "LogoType" unless = Default)
+* Condensed the Group Information Page
+* Added "DevForumPlus" Variable to make the two themes more compatiable
+* Condensed the Code
+* Fixed Issue where "Favourite" button on the users own badge listings would cover over the description of the badge.
+* Fixed Issue where if multiple topis/messages link to a message the "x more" button would clip into the topic information stats box
+* Fixed Issue where the topic slider info would clip into the initial post date info ontop of slider
+* Fixed Issue where header contents would overflow
+* Fixed Spacing between the Topic Pinned/Notification Status (Also fixes DevForum+ issue where hovering over them would cause clipping)
+* Fixed Issue where the Public Sans Import Link (Now Source Sans) had <span></span> causing the font to fail to import
+* Added Ability to Disable/Remove the Creator Hub Top Bar
 ## Update 1.6
 * Condensed Bages Section
 * Condensed User Card Popup
